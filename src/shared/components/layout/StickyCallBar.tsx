@@ -3,12 +3,6 @@
 import { useEffect, useState } from "react";
 import { site } from "@/shared/config/site";
 
-/**
- * Mobile-only sticky bottom bar — the single highest-impact CRO element for a
- * visitor who searched "pressure washing near me" on a phone. One-tap Call and
- * one-tap Quote, always reachable. Appears after the user scrolls past the
- * hero (where those CTAs already live) to avoid redundant clutter up top.
- */
 export function StickyCallBar() {
   const [show, setShow] = useState(false);
 
@@ -21,10 +15,8 @@ export function StickyCallBar() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-px border-t border-slate-200 bg-slate-200 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] transition-transform duration-200 lg:hidden ${
-        show ? "translate-y-0" : "translate-y-full"
-      }`}
-      // hidden from a11y tree until shown so it isn't a dangling focus target
+      className={`fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-px border-t border-slate-200 bg-slate-200 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] transition-transform duration-200 lg:hidden ${show ? "translate-y-0" : "translate-y-full"
+        }`}
       aria-hidden={!show}
     >
       <a

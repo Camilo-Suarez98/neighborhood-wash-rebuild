@@ -8,7 +8,6 @@ import { Footer } from "@/shared/components/layout/Footer";
 import { StickyCallBar } from "@/shared/components/layout/StickyCallBar";
 import { LocalBusinessJsonLd } from "@/shared/components/seo/LocalBusinessJsonLd";
 
-// Self-hosted variable font via next/font — no external request, no layout shift.
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -63,11 +62,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
-        {/*
-          Attention-to-detail marker (§3). A JSX comment is stripped from the
-          rendered HTML, so we inject a REAL HTML comment node as the very first
-          thing in <body> — it survives to "view source".
-        */}
         <div
           hidden
           dangerouslySetInnerHTML={{

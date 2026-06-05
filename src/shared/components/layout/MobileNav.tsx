@@ -5,15 +5,9 @@ import { site } from "@/shared/config/site";
 import { PhoneLink } from "@/shared/components/ui/PhoneLink";
 import { ButtonLink } from "@/shared/components/ui/Button";
 
-/**
- * Mobile hamburger + slide-down menu. This is the ONLY interactive part of
- * the header, so it's the only piece that needs to be a Client Component —
- * the rest of the header stays a Server Component (zero JS).
- */
 export function MobileNav() {
   const [open, setOpen] = useState(false);
 
-  // Lock background scroll while the menu is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {

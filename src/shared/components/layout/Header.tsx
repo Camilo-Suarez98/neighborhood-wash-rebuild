@@ -4,14 +4,9 @@ import { ButtonLink } from "@/shared/components/ui/Button";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 
-/**
- * Sticky site header. Server Component — no client JS except the mobile menu.
- * For the high-intent "pressure washing near me" visitor the phone number is
- * always one tap away and the estimate CTA is always visible.
- */
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
 

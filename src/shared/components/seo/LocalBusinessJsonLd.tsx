@@ -1,10 +1,5 @@
 import { site } from "@/shared/config/site";
 
-/**
- * LocalBusiness structured data (schema.org) built from the single NAP source.
- * Helps Google show the business in local/maps results for "pressure washing
- * near me" searches. Rendered as a <script type="application/ld+json">.
- */
 export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -50,7 +45,6 @@ export function LocalBusinessJsonLd() {
   return (
     <script
       type="application/ld+json"
-      // structured data must reach the DOM as text, not be JSX-escaped
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );

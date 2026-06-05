@@ -2,10 +2,6 @@ import Link from "next/link";
 import { site } from "@/shared/config/site";
 import { cn } from "@/shared/lib/cn";
 
-/**
- * Inline SVG wordmark — no image request, no layout shift, scales crisply.
- * A water-drop glyph reinforces the pressure-washing brand at a glance.
- */
 export function Logo({
   className,
   onDark = false,
