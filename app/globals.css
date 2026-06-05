@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Brand theme. Tailwind v4 reads `@theme` to generate utilities, so
+ * `--color-brand` becomes `bg-brand`, `text-brand`, `border-brand`, etc.
+ * Water blues for trust, a fresh green for the high-intent "call" CTA.
+ */
+@theme {
+  --color-brand: #0b6bcb;
+  --color-brand-dark: #073b6b;
+  --color-brand-light: #e6f1fb;
+  --color-accent: #16a34a;
+  --color-accent-dark: #15803d;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* consistent vertical rhythm for Section */
+  --spacing-section: 5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* offset anchored sections so the sticky header doesn't cover headings */
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-ink);
+  background: #ffffff;
+}
+
+/* Visible, consistent keyboard focus for accessibility. */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
