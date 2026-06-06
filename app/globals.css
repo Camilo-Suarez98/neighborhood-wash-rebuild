@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/*
- * Brand theme. Tailwind v4 reads `@theme` to generate utilities, so
- * `--color-brand` becomes `bg-brand`, `text-brand`, `border-brand`, etc.
- * Colors taken from the Neighborhood Wash logo/original site:
- * teal #005981 (trust/chrome), green #0c8100 (high-intent "call"/CTA), black #000.
- */
 @theme {
   --color-brand: #005981;
   --color-brand-dark: #00405d;
@@ -13,17 +7,14 @@
   --color-accent: #0c8100;
   --color-accent-dark: #0a6a00;
   --color-ink: #000000;
-  --color-muted: #475569;
+  --color-muted: #424f62;
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-
-  /* consistent vertical rhythm for Section */
   --spacing-section: 5rem;
 }
 
 html {
   scroll-behavior: smooth;
-  /* offset anchored sections so the sticky header doesn't cover headings */
   scroll-padding-top: 5rem;
   -webkit-text-size-adjust: 100%;
 }
@@ -33,7 +24,6 @@ body {
   background: #ffffff;
 }
 
-/* Visible, consistent keyboard focus for accessibility. */
 :focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 2px;

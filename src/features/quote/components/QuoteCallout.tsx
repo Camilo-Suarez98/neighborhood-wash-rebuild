@@ -27,14 +27,14 @@ export function QuoteCallout() {
           </ul>
 
           <div className="mt-8 rounded-xl bg-white/10 p-5">
-            <p className="text-sm text-white/70">Rather call?</p>
+            <p className="text-sm text-white/90">Rather call?</p>
             <PhoneLink className="mt-1 text-2xl font-bold text-white hover:text-brand-light">
               {site.phoneDisplay}
             </PhoneLink>
-            <p className="mt-1 text-sm text-white/70">
+            <p className="mt-1 text-sm text-white/90">
               {site.hours[0].days}: {site.hours[0].time}
             </p>
-            <p className="mt-1 text-sm text-white/70">
+            <p className="mt-1 text-sm text-white/90">
               {site.hours[1].days}: {site.hours[1].time}
             </p>
           </div>

@@ -89,7 +89,7 @@ export function Footer() {
               <ul className="space-y-1 text-sm">
                 {site.hours.map((h) => (
                   <li key={h.days}>
-                    <span className="text-slate-400">{h.days}:</span> {h.time}
+                    <span className="text-slate-300">{h.days}:</span> {h.time}
                   </li>
                 ))}
               </ul>
@@ -106,7 +106,7 @@ export function Footer() {
           <p>
             &copy;
           </p>
-          <p className="text-slate-400">{site.name} · {address.city}, {address.state}</p>
+          <p className="text-slate-300">{site.name} · {address.city}, {address.state}</p>
         </div>
       </Container>
     </footer>
