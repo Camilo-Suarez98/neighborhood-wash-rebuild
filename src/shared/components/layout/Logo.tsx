@@ -12,7 +12,7 @@ export function Logo({
 }) {
   return (
     <Link
-      href="home"
+      href="#home"
       aria-label={`${site.name} — home`}
       className={cn(
         "inline-flex items-center",
