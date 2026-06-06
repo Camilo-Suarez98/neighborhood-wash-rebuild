@@ -34,6 +34,9 @@ export function QuoteCallout() {
             <p className="mt-1 text-sm text-white/70">
               {site.hours[0].days}: {site.hours[0].time}
             </p>
+            <p className="mt-1 text-sm text-white/70">
+              {site.hours[1].days}: {site.hours[1].time}
+            </p>
           </div>
         </div>
 
