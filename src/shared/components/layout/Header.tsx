@@ -10,16 +10,50 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          {site.nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-ink transition-colors hover:text-brand"
-            >
-              {item.label}
-            </a>
-          ))}
+        <nav aria-label="Primary" className="hidden items-center gap-6 lg:flex">
+          {site.nav.map((item) =>
+            "children" in item ? (
+              <div key={item.label} className="group relative">
+                <a
+                  href={item.href}
+                  aria-haspopup="true"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-ink transition-colors hover:text-brand"
+                >
+                  {item.label}
+                  <svg
+                    viewBox="0 0 20 20"
+                    className="h-4 w-4 transition-transform group-hover:rotate-180"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M5.2 7.5 10 12.3l4.8-4.8z" />
+                  </svg>
+                </a>
+                <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                  <ul className="min-w-56 rounded-xl border border-slate-200 bg-white p-2 shadow-lg shadow-slate-200/60">
+                    {item.children.map((child) => (
+                      <li key={child.label}>
+                        <a
+                          href={child.href}
+                          className="block rounded-lg px-3 py-2 text-sm text-ink transition-colors hover:bg-brand-light hover:text-brand"
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium text-ink transition-colors hover:text-brand"
+              >
+                {item.label}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">

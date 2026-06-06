@@ -74,8 +74,8 @@ export function Footer() {
             <nav aria-label="Quick links">
               <GroupTitle>Company</GroupTitle>
               <ul className="grid grid-cols-1 gap-2 text-sm">
-                {site.nav.map((item) => (
-                  <li key={item.href}>
+                {site.nav.map((item, index) => (
+                  <li key={index}>
                     <a href={item.href} className="hover:text-white">
                       {item.label}
                     </a>
