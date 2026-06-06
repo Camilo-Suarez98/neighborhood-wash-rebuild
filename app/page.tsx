@@ -13,8 +13,8 @@ export default function HomePage() {
       <Hero />
       <ServicesSection />
       <WhyChooseUs />
-      <Testimonials />
       <WorkGallery />
+      <Testimonials />
       <QuoteCallout />
       <AreasServed />
       <ContactInfo />
