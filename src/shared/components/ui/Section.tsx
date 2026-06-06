@@ -2,11 +2,6 @@ import type { ElementType, ReactNode } from "react";
 import { cn } from "@/shared/lib/cn";
 import { Container } from "./Container";
 
-/**
- * Consistent section wrapper: vertical rhythm, optional tinted background,
- * a semantic landmark, and an `aria-label` for screen-reader navigation.
- * `id` enables in-page anchor links from the nav.
- */
 export function Section({
   id,
   ariaLabel,

@@ -6,7 +6,7 @@ import { galleryContent } from "../data/gallery.content";
 
 export function WorkGallery() {
   return (
-    <Section id="our-work" ariaLabel="Our work — before and after" tint="light">
+    <Section id="our-work" ariaLabel="Our work — before and after">
       <div className="mx-auto max-w-2xl text-center">
         <Heading level={2} className="text-brand-dark">
           {galleryContent.heading}

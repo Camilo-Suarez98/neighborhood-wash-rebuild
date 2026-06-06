@@ -5,7 +5,7 @@ import { socialProof } from "../data/testimonials.content";
 
 export function Testimonials() {
   return (
-    <Section id="reviews" ariaLabel="Customer reviews and guarantee">
+    <Section id="reviews" ariaLabel="Customer reviews and guarantee" tint="light">
       <div className="mx-auto max-w-2xl text-center">
         <Heading level={2} className="text-brand-dark">
           {socialProof.heading}
