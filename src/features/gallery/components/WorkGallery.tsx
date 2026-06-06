@@ -11,12 +11,12 @@ export function WorkGallery() {
         <Heading level={2} className="text-brand-dark">
           {galleryContent.heading}
         </Heading>
-        <p className="mt-4 text-lg text-muted">{galleryContent.intro}</p>
+        <p className="mt-4 text-lg text-muted leading-normal">{galleryContent.intro}</p>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {galleryContent.pairs.map((pair) => (
-          <BeforeAfter key={pair.id} pair={pair} />
+        {galleryContent.items.map((item) => (
+          <BeforeAfter key={item.id} item={item} />
         ))}
       </div>
 

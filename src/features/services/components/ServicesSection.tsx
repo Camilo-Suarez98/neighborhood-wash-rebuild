@@ -35,7 +35,7 @@ export function ServicesSection() {
         <Heading level={2} className="text-brand-dark">
           {servicesContent.heading}
         </Heading>
-        <p className="mt-4 text-lg text-muted">{servicesContent.intro}</p>
+        <p className="mt-4 text-lg text-muted leading-normal">{servicesContent.intro}</p>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">

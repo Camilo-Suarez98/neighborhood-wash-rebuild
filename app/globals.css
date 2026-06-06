@@ -3,15 +3,16 @@
 /*
  * Brand theme. Tailwind v4 reads `@theme` to generate utilities, so
  * `--color-brand` becomes `bg-brand`, `text-brand`, `border-brand`, etc.
- * Water blues for trust, a fresh green for the high-intent "call" CTA.
+ * Colors taken from the Neighborhood Wash logo/original site:
+ * teal #005981 (trust/chrome), green #0c8100 (high-intent "call"/CTA), black #000.
  */
 @theme {
-  --color-brand: #0b6bcb;
-  --color-brand-dark: #073b6b;
-  --color-brand-light: #e6f1fb;
-  --color-accent: #16a34a;
-  --color-accent-dark: #15803d;
-  --color-ink: #0f172a;
+  --color-brand: #005981;
+  --color-brand-dark: #00405d;
+  --color-brand-light: #e3eff4;
+  --color-accent: #0c8100;
+  --color-accent-dark: #0a6a00;
+  --color-ink: #000000;
   --color-muted: #475569;
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;

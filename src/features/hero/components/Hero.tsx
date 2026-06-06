@@ -23,7 +23,7 @@ export function Hero() {
             {heroContent.headline}
           </Heading>
 
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted lg:mx-0">
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-normal text-muted lg:mx-0">
             {heroContent.subheadline}
           </p>
 

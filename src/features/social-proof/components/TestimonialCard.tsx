@@ -9,7 +9,7 @@ export function TestimonialCard({ t }: { t: Testimonial }) {
         label={`Rated ${t.rating} out of 5 stars`}
         className="mb-4"
       />
-      <blockquote className="flex-1 text-[15px] leading-relaxed text-ink">
+      <blockquote className="flex-1 text-[15px] leading-normal text-ink">
         &ldquo;{t.quote}&rdquo;
       </blockquote>
       <figcaption className="mt-5 border-t border-slate-100 pt-4">

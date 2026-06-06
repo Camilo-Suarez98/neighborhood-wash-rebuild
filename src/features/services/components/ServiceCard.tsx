@@ -37,7 +37,7 @@ export function ServiceCard({ service }: { service: FeaturedService }) {
       <Heading level={3} className="text-brand-dark">
         {service.title}
       </Heading>
-      <p className="mt-3 flex-1 text-base leading-relaxed text-muted">
+      <p className="mt-3 flex-1 text-base leading-normal text-muted">
         {service.description}
       </p>
       <span className="mt-5 inline-flex items-center gap-1 font-semibold text-brand group-hover:gap-2 transition-[gap]">

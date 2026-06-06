@@ -28,7 +28,7 @@ export function ValueProp({ item }: { item: ValuePropItem }) {
       <Heading level={3} className="mt-5 text-brand-dark">
         {item.title}
       </Heading>
-      <p className="mt-3 text-base leading-relaxed text-muted">{item.description}</p>
+      <p className="mt-3 text-base leading-normal text-muted">{item.description}</p>
     </div>
   );
 }

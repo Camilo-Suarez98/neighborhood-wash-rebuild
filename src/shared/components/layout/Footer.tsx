@@ -19,7 +19,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo onDark className="mb-4" />
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-normal">
               Professional pressure washing for {site.areasServed[0]} and nearby towns.
               Locally owned, licensed &amp; insured.
             </p>

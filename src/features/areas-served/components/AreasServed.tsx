@@ -9,7 +9,7 @@ export function AreasServed() {
         <Heading level={2} className="text-brand-dark">
           {areasContent.heading}
         </Heading>
-        <p className="mt-4 text-lg text-muted">{areasContent.intro}</p>
+        <p className="mt-4 text-lg text-muted leading-normal">{areasContent.intro}</p>
       </div>
 
       <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">

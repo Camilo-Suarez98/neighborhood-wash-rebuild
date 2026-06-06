@@ -1,64 +1,44 @@
 import type { ImageAsset } from "@/types";
 
-export interface BeforeAfterPair {
+export interface GalleryItem {
   id: string;
   label: string;
-  before: ImageAsset;
-  after: ImageAsset;
+  image: ImageAsset;
 }
 
 export const galleryContent = {
   heading: "See the Difference",
-  intro:
-    "Real surfaces, brought back to life. Drag the slider to reveal the before and after.",
-  pairs: [
+  intro: "Real surfaces, brought back to life — see the before and after, side by side.",
+  items: [
     {
       id: "driveway",
       label: "Concrete Driveway",
-      before: {
-        src: "/images/driveway-before.svg",
+      image: {
+        src: "/images/concrete.webp",
         width: 800,
         height: 600,
-        alt: "Concrete driveway in Roanoke, VA stained with dirt and oil before pressure washing",
-      },
-      after: {
-        src: "/images/driveway-after.svg",
-        width: 800,
-        height: 600,
-        alt: "The same Roanoke, VA concrete driveway clean and bright after pressure washing",
+        alt: "Before and after pressure washing a concrete driveway in Roanoke, VA — dirt- and oil-stained on one side, clean and bright on the other",
       },
     },
     {
       id: "siding",
       label: "House Siding",
-      before: {
-        src: "/images/siding-before.svg",
+      image: {
+        src: "/images/house.webp",
         width: 800,
         height: 600,
-        alt: "House siding in Roanoke, VA covered in green algae streaks before soft washing",
-      },
-      after: {
-        src: "/images/siding-after.svg",
-        width: 800,
-        height: 600,
-        alt: "The same Roanoke, VA house siding clean and bright white after soft washing",
+        alt: "Before and after soft washing house siding in Roanoke, VA — green algae streaks on one side, clean and bright white on the other",
       },
     },
     {
       id: "deck",
       label: "Wood Deck",
-      before: {
-        src: "/images/deck-before.svg",
+      image: {
+        src: "/images/wood.webp",
         width: 800,
         height: 600,
-        alt: "Weathered, graying wood deck in Roanoke, VA before pressure washing",
-      },
-      after: {
-        src: "/images/deck-after.svg",
-        width: 800,
-        height: 600,
-        alt: "The same Roanoke, VA wood deck restored to a warm clean finish after pressure washing",
+        alt: "Before and after pressure washing a wood deck in Roanoke, VA — weathered and graying on one side, restored to a warm clean finish on the other",
       },
     },
-  ] satisfies BeforeAfterPair[],
+  ] satisfies GalleryItem[],
 } as const;

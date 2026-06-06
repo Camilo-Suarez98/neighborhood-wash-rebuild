@@ -10,7 +10,7 @@ export function WhyChooseUs() {
         <Heading level={2} className="text-brand-dark">
           {valueProps.heading}
         </Heading>
-        <p className="mt-4 text-lg text-muted">{valueProps.intro}</p>
+        <p className="mt-4 text-lg text-muted leading-normal">{valueProps.intro}</p>
       </div>
 
       <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

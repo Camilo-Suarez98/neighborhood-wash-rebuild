@@ -37,7 +37,7 @@ export function ContactInfo() {
           <Heading level={2} className="text-brand-dark">
             {contactContent.heading}
           </Heading>
-          <p className="mt-4 text-lg text-muted">{contactContent.intro}</p>
+          <p className="mt-4 text-lg text-muted leading-normal">{contactContent.intro}</p>
 
           <div className="mt-8 space-y-6">
             <Row
