@@ -13,11 +13,6 @@ function Star({ filled }: { filled: boolean }) {
   );
 }
 
-/**
- * Accessible star rating. `value` is the visual fill (rounded to whole stars);
- * the true rating is exposed to assistive tech via the label. We never present
- * an invented review count — pass a real one or omit it.
- */
 export function Rating({
   value,
   outOf = 5,

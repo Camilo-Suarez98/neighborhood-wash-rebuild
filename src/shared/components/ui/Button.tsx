@@ -6,14 +6,11 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const base =
-  // min-height 44px keeps tap targets accessible on mobile
   "inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg font-semibold " +
   "transition-colors focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
-  // primary = the "call now" action (green converts for high-intent visitors)
   primary: "bg-accent text-white hover:bg-accent-dark shadow-sm",
-  // secondary = "get free estimate"
   secondary: "bg-brand text-white hover:bg-brand-dark shadow-sm",
   ghost: "border border-white/30 text-white hover:bg-white/10",
 };
@@ -30,7 +27,6 @@ type CommonProps = {
   children: ReactNode;
 };
 
-/** Anchor/Link button: internal hrefs use next/link, external + tel/mailto use <a>. */
 export function ButtonLink({
   href,
   variant = "primary",
@@ -56,7 +52,6 @@ export function ButtonLink({
   );
 }
 
-/** Real <button> for form actions / interactive triggers. */
 export function Button({
   variant = "primary",
   size = "md",

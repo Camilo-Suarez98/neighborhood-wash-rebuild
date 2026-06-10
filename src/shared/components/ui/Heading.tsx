@@ -10,12 +10,6 @@ const styles: Record<Level, string> = {
   4: "text-lg font-semibold",
 };
 
-/**
- * Enforces the document's heading hierarchy. Pass the semantic `level`
- * (h1…h4); use `visualLevel` only when the design needs a different size
- * than the outline level — keeping markup correct for SEO + a11y while the
- * page still looks right. Exactly one `<h1>` should exist (the hero).
- */
 export function Heading({
   level,
   visualLevel,

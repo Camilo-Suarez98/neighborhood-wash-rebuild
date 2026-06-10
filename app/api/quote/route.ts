@@ -1,12 +1,5 @@
 import { NextResponse } from "next/server";
 
-/**
- * Quote form endpoint. Validates the lead and (for now) logs it server-side.
- *
- * TODO(launch): wire this to a real destination — e.g. send an email via
- * Resend/SendGrid to `site.email`, or push to a CRM. Until then it accepts the
- * submission so the front-end flow works end to end.
- */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
   try {
@@ -27,7 +20,6 @@ export async function POST(request: Request) {
     );
   }
 
-  // Minimal phone sanity check (digits only, 7–15 long).
   const digits = phone.replace(/\D/g, "");
   if (digits.length < 7 || digits.length > 15) {
     return NextResponse.json(
@@ -35,9 +27,6 @@ export async function POST(request: Request) {
       { status: 422 },
     );
   }
-
-  // Placeholder delivery — replace with email/CRM integration at launch.
-  console.log("[quote] new lead", { name, phone, service, message });
 
   return NextResponse.json({ ok: true });
 }

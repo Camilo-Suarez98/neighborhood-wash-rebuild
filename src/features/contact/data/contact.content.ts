@@ -6,6 +6,5 @@ export const contactContent = {
   heading: "Get in Touch",
   intro: "Call, email, or stop by — we're local and happy to help.",
   fullAddress,
-  // Keyless Google Maps embed (no API key, lazy-loaded).
   mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`,
 } as const;
